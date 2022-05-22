@@ -1,0 +1,309 @@
+@charset "UTF-8";
+/*============================================================================================
+      Header
+=============================================================================================*/
+/*    Navigation
+=====================================================*/
+@keyframes navAnime{
+  0% {
+    top: -125px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+.header_nav{
+  position: absolute;
+  background-color: rgb(48, 48, 48);
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: .2s;
+  z-index: 9;
+}
+.header_nav.js_show{
+  position: fixed;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.145);
+  animation: navAnime .2s ease 0s normal;
+  z-index: 8;
+}
+.header_nav_top{
+  padding: 10px 30px;
+}
+.header_ttl_sub{
+  display: inline-block;
+  padding-right: 10px;
+  font-size: 1.5rem;
+}
+.header_nav_lst{
+  padding: 10px 20px;
+  border-top: 1px solid rgb(99, 99, 99);
+}
+.header_nav_lst_itm+.header_nav_lst_itm{
+  margin-left: 50px;
+}
+
+/*============================================================================================
+      Footer
+=============================================================================================*/
+.w_Footer{
+  padding-top: 60px;
+  border-top: 1px solid rgb(255, 255, 255);
+  background-color: rgb(198, 198, 198);
+  color: black;
+}
+.footer_sub_ttl_txt{
+  display: block;
+}
+.footer_sub_ttl_txt_top{
+  padding-right: 13em;
+}
+.footer_sub_ttl_txt_bottom{
+  padding-left: 14em;
+}
+.footer_sitemap_cont{
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.footer_ttl{
+  font-size: 4.4rem;
+  line-height: 1;
+}
+.footer_ttl_area{
+  margin-bottom: 40px;
+}
+.footer_addrres_area{
+  margin-bottom: 40px;
+}
+.footer_cct_area{
+  width: 270px;
+  padding: 10px;
+  background-color: rgb(182, 153, 123);
+}
+.footer_cap{
+  padding: 20px 0;
+}
+/*============================================================================================
+      Contents
+=============================================================================================*/
+/*    MVanimation
+=====================================================*/
+.mv_mask{
+  position: fixed;
+  background-color: rgb(48, 48, 48);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 2s, z-index 2.2s;
+  z-index: 999999;
+  /* display: none; */
+}
+.mv_cont{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.mv_sakura{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 2s;
+}
+.mv_sakura img{
+  width: 100%;
+}
+.sakura_sub{
+  position: absolute;
+  top: -350px;
+  width: 100%;
+  opacity: 0;
+  transition: 2s;
+}
+.title{
+  font-size: 2.8rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  writing-mode: vertical-lr;
+  font-style: normal;
+  font-weight: 400;
+}
+.sub_ttl{
+  font-size: 1.4rem;
+  padding-bottom: 15px;
+}
+.textAnimation02{
+  opacity: 0;
+}
+.textAnimation02 span{
+  display: inline-flex;
+  justify-content: center;
+  }
+.textAnimation02 > span{
+    overflow: hidden;
+  }
+.textAnimation02 >span>span{
+    animation: showText 1s backwards;
+    opacity: 1;
+  }
+.textAnimation01{
+  opacity: 0;
+}
+.textAnimation01 span{
+  display: inline-flex;
+  justify-content: center;
+  }
+.textAnimation01 > span{
+    overflow: hidden;
+  }
+.textAnimation01 >span>span{
+    animation: showText 1s backwards;
+    opacity: 1;
+  }
+  @keyframes showText{
+    0%{
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    100%{
+        opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+.animation_fig{
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  left: 0;
+  bottom: -20px;
+  opacity: 0;
+  transition: 2s;
+}
+.animation_fig img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#headerPic{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#headerPic img{
+  opacity: 0;
+  transition: opacity 3s ease-in-out; 
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+/*    slider
+=====================================================*/
+.top_slider_sec{
+  padding-top: 125px;
+  z-index: 8;
+}
+.top_slider.slick-slider{
+  padding-bottom: 30px;
+  height: calc(100vh - 125px);
+}
+.top_slider_itm.g_slider_itm{
+  height: 100%;
+  text-align: center;
+}
+.top_slider_itm img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*    お知らせ
+=====================================================*/
+.top_info_date{
+  padding: 0 20px;
+}
+.top_info_lst_itm{
+  padding-bottom: 20px;
+}
+.top_info_lst_itm+.top_info_lst_itm{
+  padding-top: 20px;
+  border-top: 1px solid rgb(99, 99, 99);
+}
+.top_info_lst_itm:last-child{
+  padding-bottom: 0;
+}
+.top_info_lst_txt{
+  width: calc(100% - 160px);
+}
+.top_info_img_lst{
+  width: 800px;
+  margin: auto;
+  margin-top: 60px;
+}
+.top_info_img_lst_itm img{
+  width: 100%;
+  object-fit: cover;
+}
+
+/*    ご挨拶
+=====================================================*/
+.top_about_txtcont{
+  overflow: hidden;
+}
+.top_about_img{
+  clear: both;
+  float: right;
+  width: 300px;
+}
+.top_about_txtarea_name{
+  display: block;
+  padding: 10px 0;
+}
+
+/*    店舗情報
+=====================================================*/
+.top_shop_tbl{
+  width: 800px;
+  margin: auto;
+}
+.top_shop_tbl::before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: -67px;
+  opacity: .3;
+  background: url(../img/top/shop.jpg) no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 250px;
+}
+.top_shop_tbl tr+tr{
+  border-top: 1px solid rgb(99, 99, 99);
+}
+.top_shop_tbl_ttl{
+  width: 150px;
+}
+.top_shop_tbl_txt{
+  padding-bottom: 15px;
+}
+.top_shop_tbl tr+tr .top_shop_tbl_txt{
+  padding-top: 15px;
+}
+.top_shop_tbl tr:last-child .top_shop_tbl_txt{
+  padding-bottom: 0px;
+}
+.top_shop_btn{
+  margin-top: 110px;
+}
